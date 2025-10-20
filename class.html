@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Design Assets — Visual Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#081025;--muted:#acc0db;--accent:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#dbe9ff;background:var(--bg)}
+
+    /* Header */
+    .header{display:flex;align-items:center;justify-content:space-between;padding:20px 56px}
+    .brand{font-weight:700;letter-spacing:1px}
+    .nav{display:flex;gap:22px;color:var(--muted);font-size:14px}
+    .nav a{color:var(--muted);text-decoration:none}
+    .auth{display:flex;gap:10px}
+    .btn-white{background:#fff;color:var(--bg);padding:8px 14px;border-radius:999px;border:0;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 520px;gap:36px;align-items:center;padding:48px 56px;min-height:76vh;position:relative}
+    .left{max-width:700px}
+    .dot{width:12px;height:12px;border-radius:999px;background:#fff;margin-bottom:18px}
+    h1{font-size:44px;line-height:1.02;margin:0 0 18px;color:#e6f0ff}
+    p.lead{color:var(--muted);margin:0 0 24px}
+    .ctas{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:999px;border:0;font-weight:700;cursor:pointer}
+    .btn.primary{background:#fff;color:var(--bg)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff}
+
+    /* Right visual */
+    .visual{position:relative;display:flex;align-items:center;justify-content:center}
+    .card{width:460px;height:420px;border-radius:18px;padding:18px;position:relative;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 18px 40px rgba(2,6,23,0.6);overflow:visible}
+
+    /* decorative blobs */
+    .blob{position:absolute;border-radius:999px;filter:blur(18px);opacity:0.95}
+    .blob.blue{width:200px;height:120px;background:linear-gradient(90deg,#2b6cff,#6b9bff);right:40px;top:20px}
+    .blob.green{width:160px;height:110px;background:linear-gradient(90deg,#22c55e,#7ee7a6);right:0;bottom:40px}
+    .blob.yellow{width:110px;height:110px;background:linear-gradient(90deg,#ffcf4d,#ffd27a);left:20px;top:80px}
+
+    .person{position:relative;z-index:6;border-radius:10px;max-width:380px;height:auto;object-fit:cover;display:block;margin:0 auto;transform:translateY(6px)}
+
+    /* toast */
+    .toast{position:absolute;left:36px;bottom:26px;background:rgba(7,9,14,0.6);backdrop-filter:blur(6px);padding:10px 14px;border-radius:999px;display:flex;gap:10px;align-items:center;color:#fff;font-size:13px;z-index:8}
+    .toast .avatar{width:34px;height:34px;border-radius:999px;overflow:hidden}
+    .toast .avatar img{width:100%;height:100%;object-fit:cover}
+
+    /* round arrow */
+    .arrow{position:absolute;right:32px;bottom:26px;width:56px;height:56px;border-radius:999px;border:2px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;z-index:7}
+
+    /* responsive */
+    @media (max-width:1024px){
+      .hero{grid-template-columns:1fr;gap:18px;padding:32px}
+      .card{width:100%;height:320px}
+      h1{font-size:34px}
+      .visual{order:-1}
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">YOUR LOGO</div>
+    <nav class="nav">
+      <a href="#">Assets</a>
+      <a href="#">Creators</a>
+      <a href="#">Careers</a>
+      <a href="#">Go Pro</a>
+    </nav>
+    <div class="auth">
+      <button class="login">Log in</button>
+      <button class="btn-white">Sign up</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="left">
+      <div class="dot"></div>
+      <h1>Download design assets<br/>for free!</h1>
+      <p class="lead">Your one stop platform for anything, and everything design</p>
+      <div class="ctas">
+        <button class="btn primary">Get Started</button>
+        <button class="btn ghost">Watch Video</button>
+      </div>
+    </div>
+
+    <div class="visual">
+      <div class="card">
+        <!-- decorative blobs -->
+        <div class="blob blue"></div>
+        <div class="blob green"></div>
+        <div class="blob yellow"></div>
+
+        <!-- main image: using the uploaded file for closer match -->
+        <img src="/mnt/data/WhatsApp Image 2025-10-20 at 11.21.30_1ce2cff4.jpg" alt="person" class="person" style="width:380px;border-radius:12px;position:relative;left:10px;top:6px;">
+
+        <!-- toast -->
+        <div class="toast">
+          <div class="avatar"><img src="https://i.ibb.co/m0C1hLz/avatar.jpg" alt="avatar"></div>
+          <div>
+            <div style="font-weight:700;">Seyi Ajibona</div>
+            <div style="font-size:12px;color:#cbd7ea;">The resources on this platform are lit 🔥</div>
+          </div>
+        </div>
+
+        <!-- round arrow -->
+        <div class="arrow">→</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
